@@ -1,0 +1,16 @@
+@mixin flex(
+  $direction: row,
+  $gap: 0,
+  $justify: flex-start,
+  $align: stretch,
+) {
+  display: flex !important;
+  flex-direction: $direction !important;
+  gap: $gap !important;
+  justify-content: $justify !important;
+  align-items: $align !important;
+}
+
+@mixin d_none(){
+    display: none !important;
+}

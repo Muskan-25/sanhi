@@ -1,0 +1,87 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1200;
+  padding: 35px 15px 15px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toolbar {
+  display: grid !important;
+  grid-template-columns: 250px 1fr 250px;
+  justify-content: space-between;
+  padding: 0 24px;
+  min-height: max-content !important;
+}
+
+.logo {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: $white;
+}
+
+.nav-links {
+  @include flex(row, 15px, center);
+}
+
+.nav-btn {
+  color: $color-primary !important;
+  text-transform: none !important;
+}
+
+.quote-btn {
+//   background: linear-gradient(90deg, #1d6b3a, #3f7f2e);
+  color: $white !important;
+  border-radius: 24px !important;
+  padding: 6px 18px !important;
+  text-transform: none !important;
+  font-size: 18px !important;
+  @include flex(row, 5px, flex-end);
+}
+
+.menu-icon {
+    @include d_none();
+    color: $white !important;
+}
+
+.drawer {
+  width: 260px;
+  padding: 16px;
+}
+
+.drawer-logo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.header.scrolled {
+  background-color: $color-primary-2 !important;
+  box-shadow: 0px 4px 11px 0px rgba($black, 47%) !important;
+  padding:  15px;
+
+  .nav-links{
+    .nav-btn{
+        color: $white !important;
+        font-size: 16px;
+        font-weight: 600;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .nav-links,
+  .quote-btn {
+    display: none !important;
+  }
+
+  .menu-icon {
+    display: block !important;
+  }
+}

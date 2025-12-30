@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+* {
+  font-family: $font-primary !important;
+  color: $color-primary;
+  transition: all .3s linear !important;
+}
+
+body{
+    position: relative;
+}
+
+.scroll-top {  
+  position: sticky !important;
+  left: 95%;
+  bottom: 20px;
+  top: auto;
+  background: $color-secondary !important;
+  color: $white !important;
+
+  svg{
+    fill: $white !important;
+  }
+}
