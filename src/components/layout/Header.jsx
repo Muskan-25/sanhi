@@ -13,10 +13,17 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../../styles/header.scss";
+import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png';
 
-const navItems = ["Home", "About", "Service", "Contact"];
+const navItems = [
+    {id:1, name:'Home', to:'/'},
+    {id:2, name:'About', to:'../about'},
+    {id:3, name:'Service', to:'../services'},
+    {id:4, name:'Contact', to:'../contact'},
+];
 
-const Header = () => {
+const Header = ({home}) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,16 +37,16 @@ const Header = () => {
     <>
       <AppBar
         position="sticky"
-        className={`header ${scrolled ? "scrolled" : ""}`}
+        className={`${home ? 'header home' : 'header'} ${scrolled ? "scrolled" : ""}`}
       >
         <Toolbar className={`toolbar container`}>
-          <Typography className="logo">✳ Consult</Typography>
+          <Box className="logo" component="img" src={logo} alt="logo"/>
 
           <Box className="nav-links">
             {navItems.map((item) => (
-              <Button key={item} className="nav-btn">
-                {item}
-              </Button>
+              <Link key={item?.id} className="nav-btn" to={item?.to}>
+                {item?.name}
+              </Link>
             ))}
           </Box>
 
@@ -59,8 +66,10 @@ const Header = () => {
           <Typography className="drawer-logo">✳ Consult</Typography>
           <List>
             {navItems.map((item) => (
-              <ListItem button key={item}>
-                <ListItemText primary={item} />
+              <ListItem button key={item?.id}>
+                <ListItemText primary={item?.name}>
+                    <Link to={item?.to}>{item.name}</Link>
+                </ListItemText>
               </ListItem>
             ))}
           </List>

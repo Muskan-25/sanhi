@@ -5,7 +5,7 @@ import CallIcon from "@mui/icons-material/Call";
 import '../../styles/home.scss'
 const Banner = () => {
   return (
-    <section className="home-banner container">
+    <section className="banner container">
       <div className="container">
         <div className="row align-items-center">
 

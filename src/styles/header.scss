@@ -5,7 +5,7 @@
   position: sticky !important;
   top: 0;
   z-index: 1200;
-  padding: 35px 15px 15px;
+  padding: 25px 15px;
   background-color: transparent !important;
   box-shadow: none !important;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -22,7 +22,8 @@
 .logo {
   font-size: 30px !important;
   font-weight: 700 !important;
-  color: $white;
+  color: $color-primary;
+  width: 120px;
 }
 
 .nav-links {
@@ -30,18 +31,59 @@
 }
 
 .nav-btn {
-  color: $color-primary !important;
-  text-transform: none !important;
+    color: $color-primary !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    position: relative;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -3px;
+    left: 0px;
+    top: auto;
+    height: 2px;
+    width: 0px;
+    background-color: $color-primary;
+    transition: all 0.3s linear;
+}
+
+&:hover{
+    &::after{
+        content: '';
+        width: 70%;
+    }
+}
 }
 
 .quote-btn {
-//   background: linear-gradient(90deg, #1d6b3a, #3f7f2e);
-  color: $white !important;
-  border-radius: 24px !important;
-  padding: 6px 18px !important;
-  text-transform: none !important;
-  font-size: 18px !important;
-  @include flex(row, 5px, flex-end);
+    background: linear-gradient(90deg, $color-secondary, $color-primary-2);
+    color: $white !important;
+    border-radius: 24px !important;
+    padding: 6px 18px !important;
+    text-transform: none !important;
+    font-size: 18px !important;
+    @include flex(row, 5px, flex-end);
+    width: max-content;
+    margin-left: auto !important;
+}
+
+.header{
+    &.home{
+          padding: 35px 15px 15px;
+        .logo{
+            color: $white !important;
+            padding-top: 10px !important;
+        }
+
+        .nav-links{
+            margin-bottom: 25px;
+        }
+
+        .quote-btn{
+            background: transparent;
+        }
+    }
 }
 
 .menu-icon {
@@ -65,14 +107,29 @@
   box-shadow: 0px 4px 11px 0px rgba($black, 47%) !important;
   padding:  15px;
 
+  .logo{
+    padding: 0px;
+    color: $white !important;
+  }
   .nav-links{
+    margin-bottom: 0px;
     .nav-btn{
         color: $white !important;
         font-size: 16px;
         font-weight: 600;
+        &::after{
+            content: '';
+            background-color: $white;
+            bottom: -7px;
+        }
+
+        &:hover{
+        }
     }
   }
 }
+
+
 
 
 @media (max-width: 992px) {
