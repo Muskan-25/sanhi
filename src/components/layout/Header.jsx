@@ -67,9 +67,9 @@ const Header = ({home}) => {
           <List>
             {navItems.map((item) => (
               <ListItem button key={item?.id}>
-                <ListItemText primary={item?.name}>
+                <Box>
                     <Link to={item?.to}>{item.name}</Link>
-                </ListItemText>
+                </Box>
               </ListItem>
             ))}
           </List>
