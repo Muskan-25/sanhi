@@ -99,10 +99,10 @@
   .banner {
     clip-path: none;
     border-radius: 24px;
-    padding: 50px 20px;
+    padding: 100px 20px 50px;
 
     h1 {
-      font-size: 38px;
+      font-size: 38px !important;
     }
   }
 }
@@ -239,7 +239,9 @@
   margin: 0 20px;
   position: relative;
   text-align: center;
-  color: #fff;
+  z-index: 0;
+  border-radius: 20px ;
+  color: $white !important;
 }
 
 /* Top curved notch */
@@ -270,55 +272,119 @@
 }
 
 .subtitle {
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 14px !important;
+  letter-spacing: 1px !important;
   margin-bottom: 12px !important; 
   opacity: 0.9;
-  color: $color-primary-2 !important;
+  color: $white !important;
 }
 
 .title {
   font-size: 36px !important;
-  font-weight: 600;
-  margin-bottom: 60px;
-  color: $color-primary-2 !important;
+  font-weight: 600 !important;
+  margin-bottom: 60px !important;
+  color: $white !important;
 }
 
 /* Cards */
 .cards-wrapper {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .solution-card {
   background: $color-secondary !important;
   border-radius: 16px !important;
-  width: 360px;
-  overflow: hidden;
+  width: 300px;
+  overflow: visible !important;
   text-align: left;
+  position: relative;
+  z-index: 0;
+
+  &::before{
+    content:'';
+    position: absolute;
+    left: -20px;
+    right: 20px;
+    top: -20px;
+    height: 190px;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: $color-secondary !important;
+  }
 }
 
 .solution-card img {
-  height: 220px;
+  height: 200px;
   object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .solution-card .MuiCardContent-root {
   padding: 24px;
 }
+.MuiCardContent-root {
+  position: relative;
+  overflow: hidden;
+  background: $color-secondary !important;
+  transition: color 0.3s ease;
+  padding: 24px;
+    z-index: 1; // keep content above overlay
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  // sliding background
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $white !important; // your green
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
 
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    .card-title,
+    .arrow {
+      color: $color-primary !important;
+    }
+  }
+
+  .MuiCardContent-root {
+    
+  }
+}
+
+/* TEXT STYLES */
 .card-title {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
+  color: $white !important;
+  transition: color 0.3s ease;
 }
 
 .arrow {
   font-size: 22px;
   cursor: pointer;
+  color: $color-primary !important;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
+/* Optional arrow micro animation */
+.solution-card:hover .arrow {
+  transform: translateX(6px);
+}
+
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -349,24 +415,22 @@
 .marquee-text {
   font-size: 120px !important;
   font-weight: 800 !important;
-  white-space: nowrap;
-  margin-right: 70px !important;
-  color: transparent;
-  -webkit-text-stroke: 1.5px $color-secondary !important;
-  -webkit-background-clip: text;
-    letter-spacing: 0;
-    -webkit-text-stroke-width: 1px;
-    /* -webkit-text-stroke-color: #0c6e6d; */
-    color: transparent;
-    -webkit-mask-image: linear-gradient(169deg, #a7eceb 50%, #9aa520 50%, #b84729) !important;
-    mask-image: linear-gradient(169deg, #a7eceb 50%, #9aa520 50%, #b84729) !important;
-    -webkit-mask-size: 200%;
+  white-space: nowrap !important;
+  margin: 0 25px 0 25px !important;
+    color: $color-secondary !important;
+  // -webkit-text-stroke: 0 !important;
 }
 
 /* Alternate filled text */
 .marquee-text:nth-child(even) {
-  color: $color-secondary;
-  -webkit-text-stroke: 0 !important;
+  color: transparent !important;
+  -webkit-background-clip: text;
+    -webkit-text-stroke-width: 0.5px !important;
+    -webkit-text-stroke-color: $color-secondary !important; 
+    
+    -webkit-mask-image: linear-gradient(-75deg, $color-secondary 50%, $color-secondary 50%, $color-secondary) ;
+    -webkit-mask-size: 200%;
+    transition: .5s;
 }
 
 @keyframes scroll-left {

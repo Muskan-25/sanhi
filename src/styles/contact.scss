@@ -1,6 +1,9 @@
+@import 'variables.scss';
+
+
 .contact-section {
   padding: 100px 40px;
-  background: #ffffff;
+  background: $white;
 }
 
 .contact-wrapper {
@@ -145,6 +148,7 @@
     border-radius: 8px;
     font-weight: 600;
     text-transform: none;
+    color: $white !important;
 
     &:hover {
       background: #095b5a;

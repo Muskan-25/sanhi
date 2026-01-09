@@ -12,9 +12,7 @@ const Banner = () => {
           {/* LEFT CONTENT */}
           <div className="col-lg-6 col-md-12 banner-content">
             <h1>
-              Crafting the Digital <br />
-              Solutions for your <br />
-              Business
+              Crafting the Digital Solutions for your Business
             </h1>
 
             <p>

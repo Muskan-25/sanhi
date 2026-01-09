@@ -23,7 +23,7 @@
   font-size: 30px !important;
   font-weight: 700 !important;
   color: $color-primary;
-  width: 120px;
+  width: 140px;
 }
 
 .nav-links {
@@ -133,12 +133,31 @@
 
 
 @media (max-width: 992px) {
+
+  .toolbar{
+  }
   .nav-links,
   .quote-btn {
     display: none !important;
   }
-
+  
   .menu-icon {
     display: block !important;
+  }
+  
+  .home{
+    .toolbar{
+      display: flex !important;
+
+      .logo{
+        padding: 0px !important;
+      }
+
+      .menu-icon{
+        svg{
+          fill: $white !important;
+        }
+      }
+    }
   }
 }

@@ -88,10 +88,10 @@ const ContactSection = () => {
               className="full"
             />
 
-            <Box className="checkbox-row">
+            {/* <Box className="checkbox-row">
               <input type="checkbox" />
               <span>I have a bike</span>
-            </Box>
+            </Box> */}
 
             <Button
               className="submit-btn"
