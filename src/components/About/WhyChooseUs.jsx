@@ -5,10 +5,11 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import "../../styles/about.scss";
 
 const features = [
-  "Professional Team Member",
-  "Implements Business",
-  "Lifetime Free Services",
-  "Affordable Pricing Plans",
+  "Cost effective outsourcing solutions",
+  "Industry specific expertise",
+  "Scalable teams as your business grows",
+  "Transparent communication & reporting",
+  "24/7 support options"
 ];
 
 const WhyChooseUs = () => {
@@ -39,7 +40,7 @@ const WhyChooseUs = () => {
         <Typography className="subtitle">WHY CHOOSE US</Typography>
 
         <Typography className="title">
-          We Provide Creative Solutions
+          Your Growth Partner,<br></br> Not Just a Service Provider
         </Typography>
 
         <Typography className="description">

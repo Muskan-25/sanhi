@@ -16,7 +16,7 @@ function About() {
         <AboutSection/>
         <CtaStats/>
         <WhyChooseUs/>
-        <Testimonials/>
+        {/* <Testimonials/> */}
 
     </>
 )

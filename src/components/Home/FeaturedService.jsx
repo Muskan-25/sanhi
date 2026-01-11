@@ -9,26 +9,33 @@ import '../../styles/home.scss';
 const services = [
   {
     id: "01",
-    title: "Business Planning and Technologist",
-    desc: "Completely implement globals without impactful markets in conveniently done innovate customer directed",
+    title: "Insurance Process Outsourcing",
+    desc: "Streamline insurance operations with our specialized support services. We handle policy processing, claims management, data entry, and back-office tasks with accuracy and confidentiality.",
     icon: <HubIcon />,
   },
   {
     id: "02",
-    title: "Human home ones and Consulting",
-    desc: "Completely implement globals without impactful markets in conveniently done innovate customer directed",
+    title: "Digital Marketing Services",
+    desc: "Grow your online presence with data-driven digital marketing solutions, including SEO, social media management, paid advertising, and content marketing tailored to your business goals.",
     icon: <GroupsIcon />,
   },
   {
     id: "03",
-    title: "Opportunities Global Business Service",
-    desc: "Completely implement globals without impactful markets in conveniently done innovate customer directed",
+    title: "Web Development & IT Services",
+    desc: "Build and maintain reliable digital solutions with our web development and IT support services, designed to enhance performance, security, and scalability.",
     icon: <PublicIcon />,
   },
   {
     id: "04",
-    title: "Insurance for Family Consulting",
-    desc: "Completely implement globals without impactful markets in conveniently done innovate customer directed",
+    title: "Taxation & Compliance Services",
+    desc: "Stay compliant and stress-free with expert support for taxation, regulatory filings, and statutory compliance across industries and jurisdictions.",
+    icon: <BusinessCenterIcon />,
+  },
+
+  {
+    id: "05",
+    title: "Accounting & Bookkeeping Services",
+    desc: "Ensure financial accuracy and transparency with our accounting and bookkeeping services, including daily bookkeeping, reporting, payroll support, and reconciliations.",
     icon: <BusinessCenterIcon />,
   },
 ];
@@ -41,15 +48,11 @@ const FeaturedService = () => {
         {/* Heading */}
         <Box className="section-head">
           <Typography className="sub-title">
-            FEATURED SERVICE
+            OUR SERVICES
           </Typography>
 
           <Typography component="h2">
-            Unlocking Your Business's Potential with
-            <br />
-            the Best Innovate Consulting active and
-            <br />
-            Dedicated Customers
+            Dedicated Support Designed to Help Your Business Grow Confidently
           </Typography>
         </Box>
 

@@ -1,21 +1,24 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
 .services-section {
   padding: 100px 40px;
   text-align: center;
-  background: #ffffff;
+  background: $white;
 
-  .section-tag {
-    font-size: 14px;
-    font-weight: 600;
-    color: #0c6e6d;
-    letter-spacing: 1px;
-  }
+  // .section-tag {
+  //   font-size: 14px;
+  //   font-weight: 600;
+  //   color: #0c6e6d;
+  //   letter-spacing: 1px;
+  // }
 
-  .section-title {
-    font-size: 38px;
-    font-weight: 700;
-    color: #0b2f2f;
-    margin: 10px 0;
-  }
+  // .section-title {
+  //   font-size: 38px;
+  //   font-weight: 700;
+  //   color: #0b2f2f;
+  //   margin: 10px 0;
+  // }
 
   .title-underline {
     display: block;
@@ -29,6 +32,7 @@
 
 .services-swiper {
   padding-bottom: 60px;
+  z-index: 0;
 
   .swiper-pagination-bullet {
     background: #cfdede;
@@ -76,7 +80,7 @@
   .card-title {
     font-size: 18px;
     font-weight: 600;
-    color: #0b2f2f;
+    color: $color-primary !important;
     margin-bottom: 10px;
   }
 
@@ -85,6 +89,11 @@
     color: #6f8f8f;
     line-height: 1.6;
     margin-bottom: 18px;
+    display: -webkit-box;
+  -webkit-line-clamp: 3;   
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   }
 
   .details-btn {

@@ -10,16 +10,16 @@ import "../../styles/contact.scss";
 const ContactSection = () => {
   return (
     <Box className="contact-section">
-      <Box className="contact-wrapper">
+      <Box className="contact-wrapper container">
         {/* LEFT CONTENT */}
         <Box className="contact-info">
-          <Typography className="small-tag">GET IN TOUCH</Typography>
+          <Typography className="small-title">GET IN TOUCH</Typography>
 
-          <Typography className="main-title">
-            Trusted By the Genius <br /> People with Consult
+          <Typography className="title">
+            Trusted By the Genius <br /> People with Strive Edge
           </Typography>
 
-          <Typography className="desc">
+          <Typography className="description">
             Media leadership skills before cross-media innovation main
             technology develop standardized platforms without consult.
           </Typography>
@@ -58,7 +58,7 @@ const ContactSection = () => {
               <Box>
                 <Typography className="label">Our Locations</Typography>
                 <Typography className="value">
-                  102/B Soltek New Elephant Road <br />
+                  102/B Soltek New Elephant Road
                   California, USA
                 </Typography>
               </Box>
@@ -68,9 +68,9 @@ const ContactSection = () => {
 
         {/* RIGHT FORM */}
         <Box className="contact-form">
-          <Typography className="form-tag">CONTACT US</Typography>
+          <Typography className="small-title">CONTACT US</Typography>
 
-          <Typography className="form-title">
+          <Typography className="title">
             Get In Touch with Consult
           </Typography>
 

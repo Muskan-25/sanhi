@@ -12,17 +12,16 @@ const Banner = () => {
           {/* LEFT CONTENT */}
           <div className="col-lg-6 col-md-12 banner-content">
             <h1>
-              Crafting the Digital Solutions for your Business
+              Empowering Your Business to Scale with Trusted Outsourcing
             </h1>
 
             <p>
-              Continually plagiarize virtual web services with home_one
-              maximizing action items. Globally build front-end
+              We provide skilled offshore teams so you can focus on growth, innovation, and customers — not operations.
             </p>
 
             <div className="banner-actions">
               <Button className="primary-btn">
-                Get Started Now
+                Get a Free Consultation
               </Button>
 
               <div className="call-info">

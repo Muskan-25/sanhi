@@ -1,18 +1,27 @@
 // SolutionApproach.jsx
 import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material";
 import "../../styles/home.scss";
+import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 
 const cards = [
   {
-    title: "Globally Enable Accurate System Sustainable",
+    title: "Costeffective outsourcing solutions",
     image: "https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/service_thumb01.png",
   },
   {
-    title: "Cultivate Exceptional Net Works Markets",
+    title: "Scalable teams as your business grows",
     image: "https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/service_thumb01.png",
   },
   {
-    title: "Communicate Technically Sound Infrastructure",
+    title: "Transparent communication & reporting",
+    image: "https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/service_thumb01.png",
+  },
+  {
+    title: "Industryspecific expertise",
+    image: "https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/service_thumb01.png",
+  },
+  {
+    title: "24/7 support options",
     image: "https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/service_thumb01.png",
   },
 ];
@@ -27,12 +36,11 @@ const SolutionApproach = () => {
       </Box>
 
       <Typography className="subtitle">
-        SOLUTION APPROACH
+        Why Choose Us
       </Typography>
 
       <Typography className="title">
-        Individuals offer Professional Services <br />
-        in the field of business Consulting
+        Your Growth Partner, Not Just a Service Provider
       </Typography>
 
       <Box className="cards-wrapper">
@@ -47,7 +55,7 @@ const SolutionApproach = () => {
               <Typography className="card-title">
                 {item.title}
               </Typography>
-              <span className="arrow">→</span>
+              <span className="arrow"><ArrowRightAltOutlinedIcon/></span>
             </CardContent>
           </Card>
         ))}

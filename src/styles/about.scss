@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .why-choose-us {
   display: flex;
   align-items: center;
@@ -68,17 +70,18 @@
     width: 50%;
 
     .subtitle {
-      font-size: 14px;
-      font-weight: 600;
-      color: #0c7c75;
-      letter-spacing: 1px;
+      font-size: 14px !important;
+    font-weight: 600 !important;
+      color: $color-secondary !important;
+      letter-spacing: 1px !important;
     }
 
     .title {
-      font-size: 36px;
-      font-weight: 700;
+      font-size: 36px !important;
+      font-weight: 700 !important;
       margin: 14px 0 18px;
       position: relative;
+      color: $color-primary !important;
 
       &::after {
         content: "";

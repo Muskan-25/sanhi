@@ -40,7 +40,7 @@ const Header = ({home}) => {
         className={`${home ? 'header home' : 'header'} ${scrolled ? "scrolled" : ""}`}
       >
         <Toolbar className={`toolbar container`}>
-          <Box className="logo" component="img" src={logo} alt="logo"/>
+          <Link to="../"> <Box className="logo" component="img" src={logo} alt="logo"/></Link>
 
           <Box className="nav-links">
             {navItems.map((item) => (

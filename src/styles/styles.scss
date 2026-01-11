@@ -3,6 +3,7 @@
 * {
   font-family: $font-primary !important;
   color: $color-primary;
+  box-sizing: border-box;
   transition: all .3s linear !important;
 }
 
@@ -23,6 +24,25 @@ body{
     fill: $white !important;
   }
 }
+
+.description {
+    color: $gray !important;
+    margin-bottom: 24px !important;
+    line-height: 1.6 !important;
+  }
+
+  .title {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: $color-primary !important ;
+    margin-bottom: 20px !important;
+  }
+  .small-title {
+    color: $color-secondary !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+    letter-spacing: 1px !important;
+  }
 
 .cta-stats-wrapper {
   padding: 40px 20px;
@@ -133,11 +153,11 @@ body{
 
 
 .working_steps_wrapper {
-  background-color: #e9f6e6;
+  background-color: $bg-light-2;
   padding: 80px 40px;
   border-radius: 20px;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 20px 40px;
 
   /* SMALL TITLE */
   .smallTitle {
@@ -154,13 +174,15 @@ body{
     font-weight: 700 !important;
     color: $color-primary !important;
     margin-bottom: 16px !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
   }
   
   /* SUB TEXT */
   .subText {
     max-width: 700px !important;
     margin: 0 auto 48px;
-    color: #5f7d7d;
+    color: $gray;
     line-height: 1.6;
   }
   
@@ -190,57 +212,85 @@ body{
       100% 100%,
       0 100%
     );
+    /* STEP NUMBER */
+    .stepNo {
+      position: absolute;
+      top: -25px;
+      right: 20px;
+      color: $color-secondary;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+    }
+    
+    /* ICON CIRCLE */
+    .iconBox {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      background: $bg-light-2;
+    }
+    
+    /* CARD TITLE */
+    .cardTitle {
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      margin-bottom: 8px !important;
+      color: $color-primary;
+    }
+    
+    /* CARD DESCRIPTION */
+    .cardDesc {
+      font-size: 14px !important;
+      color: $gray;
+      // margin-bottom: 24px !important;
+      line-height: 1.6;
+    }
+    
+    /* ARROW ICON */
+    .arrow {
+      font-size: 22px !important;
+      color: $color-secondary;
+      cursor: pointer;
+      svg{
+        transform-origin: left;
+      }
+    }
+
+    &:hover{
+      .iconBox{
+        background-color: $color-secondary;
+        svg{
+          fill: $white !important;
+        }
+      }
+
+      .arrow{
+        svg{
+          transform: scaleX(2);
+        }
+      }
+    }
   }
   
-  /* STEP NUMBER */
-  .stepNo {
-    position: absolute;
-    top: -25px;
-    right: 20px;
-    color: $color-secondary;
-    font-weight: 700 !important;
-    font-size: 14px !important;
-  }
-  
-  /* ICON CIRCLE */
-  .iconBox {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-  }
-  
-  /* CARD TITLE */
-  .cardTitle {
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    margin-bottom: 8px !important;
-    color: $color-primary;
-  }
-  
-  /* CARD DESCRIPTION */
-  .cardDesc {
-    font-size: 14px !important;
-    color: #6f8f8f;
-    margin-bottom: 24px !important;
-    line-height: 1.6;
-  }
-  
-  /* ARROW ICON */
-  .arrow {
-    font-size: 22px !important;
-    color: $color-secondary;
-    cursor: pointer;
-  }
   
   /* FOOTER TEXT */
   .footerText {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 14px !important;
-    color: $color-primary;
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    
+    a{
+      color: $color-primary !important;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
   }
   
   @media (max-width: 768px) {
