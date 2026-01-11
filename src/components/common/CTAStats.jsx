@@ -19,7 +19,7 @@ export default function CtaStats() {
         {/* STATS */}
         <Box className="stats-row">
           <Box className="stat-item">
-            <Typography className="stat-value">12K+</Typography>
+            <Typography className="stat-value">1500+</Typography>
             <Typography className="stat-label">
               TOTAL PROJECTS <br /> COMPLATED
             </Typography>
@@ -28,7 +28,7 @@ export default function CtaStats() {
           <span className="star">✦</span>
 
           <Box className="stat-item">
-            <Typography className="stat-value">950+</Typography>
+            <Typography className="stat-value">300+</Typography>
             <Typography className="stat-label">
               SATIFIED ACTIVE <br /> CUSTOMERS
             </Typography>

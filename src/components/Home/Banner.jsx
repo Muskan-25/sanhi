@@ -26,7 +26,7 @@ const Banner = () => {
 
               <div className="call-info">
                 <CallIcon />
-                <span>CALL : +123 (45678) 000</span>
+                <span>CALL : +91 82830-03828</span>
               </div>
             </div>
           </div>
