@@ -28,11 +28,9 @@ const Footer = () => {
           <div className="col-lg-2 col-md-4">
             <Typography className="footer-title">Company</Typography>
             <ul>
-              <li>About Us</li>
-              <li>Meet the Team</li>
-              <li>Integrations</li>
-              <li>Contact Us</li>
-              <li>Blog</li>
+              <li>About</li>
+              <li>Services</li>
+              <li>Contact</li>
             </ul>
           </div>
 
@@ -40,11 +38,11 @@ const Footer = () => {
           <div className="col-lg-3 col-md-4">
             <Typography className="footer-title">Service</Typography>
             <ul>
-              <li>Consultant</li>
-              <li>Web Development</li>
-              <li>UI Design</li>
-              <li>Networking</li>
-              <li>Search Engine</li>
+              <li>Insurance Process Outsourcing</li>
+              <li>Digital Marketing</li>
+              <li>Web Development & IT</li>
+              <li>Taxation & Compliance</li>
+              <li>Accounting & Bookkeeping</li>
             </ul>
           </div>
 
@@ -55,7 +53,7 @@ const Footer = () => {
             <div className="contact-item">
               <LocationOnIcon />
               <span>
-                Old Westbury 256, New York 11201, United States
+                Gurgaon, India
               </span>
             </div>
 
@@ -63,12 +61,12 @@ const Footer = () => {
 
             <div className="contact-item">
               <CallIcon />
-              <span>+880 123 (4567) 890</span>
+              <span>+91 82830-03828</span>
             </div>
 
             <div className="contact-item">
               <EmailIcon />
-              <span>example@gmail.com</span>
+              <span>info@striveedge.in</span>
             </div>
           </div>
         </div>
@@ -76,7 +74,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="footer-bottom">
           <Typography>
-            © 2024 Consult. Designed & Developed by Dream-IT
+            © 2020 StriveEdge. Designed & Developed by StriveEdge Team
           </Typography>
 
           <div className="socials">

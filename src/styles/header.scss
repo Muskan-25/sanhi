@@ -135,6 +135,7 @@
 @media (max-width: 992px) {
 
   .toolbar{
+    display: flex !important;
   }
   .nav-links,
   .quote-btn {
@@ -143,12 +144,11 @@
   
   .menu-icon {
     display: block !important;
-    
+
   }
   
   .home{
     .toolbar{
-      display: flex !important;
 
       .logo{
         padding: 0px !important;

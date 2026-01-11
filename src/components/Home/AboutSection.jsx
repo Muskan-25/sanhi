@@ -64,7 +64,7 @@ export default function AboutSection() {
           </Typography>
 
           <Typography className="description">
-            Since 2007, we have been helping businesses navigate complex markets with clarity and confidence. Our team of 20+ dedicated professionals delivers practical insights and reliable support that enable smarter planning and sustainable growth.
+            Since 2020, we have been helping businesses navigate complex markets with clarity and confidence. Our team of 50+ dedicated professionals delivers practical insights and reliable support that enable smarter planning and sustainable growth.
           </Typography>
 
           <Typography className="description">

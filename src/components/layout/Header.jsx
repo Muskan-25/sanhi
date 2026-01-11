@@ -14,7 +14,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import "../../styles/header.scss";
 import { Link } from "react-router-dom";
-import logo from '../../assets/logo.png';
+import logo_dark from '../../assets/logo_dark.png';
+import logo_light from '../../assets/logo_light.png';
 
 const navItems = [
     {id:1, name:'Home', to:'/'},
@@ -40,7 +41,7 @@ const Header = ({home}) => {
         className={`${home ? 'header home' : 'header'} ${scrolled ? "scrolled" : ""}`}
       >
         <Toolbar className={`toolbar container`}>
-          <Link to="../"> <Box className="logo" component="img" src={logo} alt="logo"/></Link>
+          <Link to="../"> <Box className="logo" component="img" src={home ? logo_light : scrolled ? logo_light :  logo_dark} alt="logo"/></Link>
 
           <Box className="nav-links">
             {navItems.map((item) => (

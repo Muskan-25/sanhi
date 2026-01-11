@@ -31,7 +31,7 @@ const ContactSection = () => {
               </Box>
               <Box>
                 <Typography className="label">Call us Anytime</Typography>
-                <Typography className="value">+123 - (4567) - 890</Typography>
+                <Typography className="value">+91 82830-03828</Typography>
               </Box>
             </Box>
 
@@ -44,7 +44,7 @@ const ContactSection = () => {
               <Box>
                 <Typography className="label">Call us Anytime</Typography>
                 <Typography className="value">
-                  example@gmail.com
+                  info@striveedge.in
                 </Typography>
               </Box>
             </Box>
@@ -58,8 +58,7 @@ const ContactSection = () => {
               <Box>
                 <Typography className="label">Our Locations</Typography>
                 <Typography className="value">
-                  102/B Soltek New Elephant Road
-                  California, USA
+                  Gurgaon, India
                 </Typography>
               </Box>
             </Box>
