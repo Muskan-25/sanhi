@@ -4,6 +4,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import "../../styles/footer.scss";
+import logo_dark from '../../assets/logo_dark2.png';
 
 const Footer = () => {
   return (
@@ -12,10 +13,11 @@ const Footer = () => {
         <div className="row footer-top">
           {/* Brand */}
           <div className="col-lg-4 col-md-12">
-            <Typography className="footer-logo">✳ Consult</Typography>
+            <Typography className="footer-logo">
+              <Box component="img" src={logo_dark} className="logo" alt="striveedge"/>
+            </Typography>
             <Typography className="footer-text">
-              Continually plagiarize virtual web service pro with home_one
-              maximizing action
+              Continually plagiarize virtual web service pro 
             </Typography>
 
             <div className="subscribe">

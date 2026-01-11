@@ -6,6 +6,7 @@
   margin: -80px 30px 30px;
   padding: 80px 0;
   position: relative;
+  max-width: -webkit-fill-available;
 
   /* 🔥 CLIP PATH SHAPE */
   clip-path: polygon(0% 0%, 34% 0%, 37% 8%, 63% 8%, 66% 0%, 100% 0%, 100% 90%, 100% 100%, 0% 100%, 0% 90%);

@@ -91,7 +91,7 @@ export default function AboutSection() {
 
                 <Box className="email">
                   <EmailOutlinedIcon />
-                  <span>example@gmail.com</span>
+                  <span>info@striveedge.in</span>
                 </Box>
               </Box>
             </Box>

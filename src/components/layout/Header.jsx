@@ -14,8 +14,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import "../../styles/header.scss";
 import { Link } from "react-router-dom";
-import logo_dark from '../../assets/logo_dark.png';
-import logo_light from '../../assets/logo_light.png';
+import logo_dark from '../../assets/logo_dark2.png';
+import logo_light from '../../assets/logo_light2.png';
 
 const navItems = [
     {id:1, name:'Home', to:'/'},
@@ -64,12 +64,12 @@ const Header = ({home}) => {
 
       <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
         <Box className="drawer">
-          <Typography className="drawer-logo">✳ Consult</Typography>
+          <Link to="../"> <Box className="logo" component="img" src={logo_dark} alt="logo"/></Link>
           <List>
             {navItems.map((item) => (
               <ListItem button key={item?.id}>
                 <Box>
-                    <Link to={item?.to}>{item.name}</Link>
+                    <Link  className="nav-btn" to={item?.to}>{item.name}</Link>
                 </Box>
               </ListItem>
             ))}
