@@ -4,7 +4,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import "../../styles/footer.scss";
-import logo_dark from '../../assets/logo_dark2.png';
+import logo_dark from '../../assets/logo_light2.png';
 
 const Footer = () => {
   return (

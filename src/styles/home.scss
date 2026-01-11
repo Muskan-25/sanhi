@@ -686,6 +686,21 @@
 
   @media (max-width: 560px){
     padding: 30px 20px;
+
+    .text-content{
+      .row{
+        flex-direction: column;
+        .col{
+          width: 100%;
+        }
+      }
+    }
+    .check-list{
+      width: 100%;
+    }
+    .actions{
+      flex-wrap: wrap;
+    }
   }
 }
 
