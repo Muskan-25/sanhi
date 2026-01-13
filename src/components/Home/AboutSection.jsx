@@ -3,13 +3,14 @@ import CheckIcon from "@mui/icons-material/Check";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import "../../styles/home.scss";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function AboutSection() {
 
   const location = useLocation();
 
   const [showBtn, setShowBtn] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(()=>{
     if(location?.pathname.includes('about')){
@@ -87,23 +88,23 @@ export default function AboutSection() {
               </Box>
 
               <Box className="actions">
-                {showBtn && <Button className="about-btn">More About Us</Button>}
+                {showBtn && <Button className="btn_primary" onClick={(e)=>navigate('about')}>More About Us</Button>}
 
-                <Box className="email">
+                <Link className="email" to='mailto:info@striveedge.in'>
                   <EmailOutlinedIcon />
                   <span>info@striveedge.in</span>
-                </Box>
+                </Link>
               </Box>
             </Box>
 
-            <Box className="col">
+            {/* <Box className="col">
               <Box className="small-image">
                 <img
                   src="https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/about_shpe.png"
                   alt="Team"
                 />
               </Box>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>

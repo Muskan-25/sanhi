@@ -1,6 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function CtaStats() {
+  const navigate = useNavigate();
   return (
     <Box className="cta-stats-wrapper">
       <Box className="cta-stats">
@@ -11,7 +13,7 @@ export default function CtaStats() {
             Insights into Industry Trends
           </Typography>
 
-          <Button className="cta-btn">Get Started Now</Button>
+          <Button className="btn_primary" onClick={(e)=> navigate('contact')}>Get Started Now</Button>
         </Box>
 
         <div className="divider" />

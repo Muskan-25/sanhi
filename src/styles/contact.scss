@@ -20,8 +20,8 @@
 .info-card {
   background: #f6fbfb;
   border-radius: 20px;
-  padding: 35px;
-  margin-top: 20px;
+  padding: 20px;
+  margin-top: 10px;
 
   .info-row {
     @include flex(row, 20px, flex-start, center);
@@ -51,7 +51,7 @@
 
   .divider {
     border-bottom: 1px dashed #b7dada;
-    margin: 26px 0;
+    margin: 20px 0;
   }
 }
 
@@ -109,21 +109,8 @@
     margin-top: 10px;
   }
 
-  .submit-btn {
-    padding: 14px 28px;
-    background: $color-secondary;
-    border-radius: 8px;
-    font-weight: 600;
-    text-transform: none;
-    color: $white !important;
-
-    svg{
-      fill: $white;
-    }
-
-    &:hover {
-      background: #095b5a;
-    }
+  .submitBtn {
+    width: 100%;
   }
 }
 

@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 
 .footer {
   background: $color-primary;
@@ -63,10 +64,10 @@ ul {
 }
 
 .subscribe {
-  display: flex;
-  gap: 12px;
+  @include flex(row, 12px, flex-start, center);
+  flex-wrap: wrap;
   margin-top: 16px;
-  width: 80%;
+  width: 100%;
 
   input {
     background: transparent;
@@ -74,23 +75,14 @@ ul {
     border-bottom: 1px solid rgba($white, .25);
     color: $white;
     padding: 8px;
-    width: 100%;
+    width: 60%;
     outline: none;
   }
 }
 
-.subscribe-btn {
-  background: $color-secondary !important;
-  color: $white !important;
-  border-radius: 24px !important;
-  padding: 6px 18px !important;
-  text-transform: none !important;
-}
 
 .contact-item {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
+  @include flex(row, 10px, flex-start, center);
   margin-bottom: 16px;
     color: $white !important;
   svg {

@@ -58,12 +58,12 @@ const WhyChooseUs = () => {
           ))}
         </Box>
 
-        <Button className="watch-btn">
+        {/* <Button className="watch-btn">
           <span className="play">
             <PlayArrowIcon />
           </span>
           Watch Video
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   );

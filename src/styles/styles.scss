@@ -12,6 +12,35 @@ body{
     min-height: 100vh;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn_primary{
+  background-color: $color-secondary !important;
+  color: $white !important;
+  border: 2px solid $color-secondary !important;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+
+  svg{
+    fill: $white !important;
+  }
+  
+  &:hover{
+    background-color: $white !important;
+    color: $color-primary-2 !important;
+
+    svg{
+      fill: $color-primary-2 !important;
+    }
+  }
+}
+
 .scroll-top {  
   position: sticky !important;
   left: 95%;

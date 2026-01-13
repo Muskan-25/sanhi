@@ -5,6 +5,7 @@ import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import "../../styles/footer.scss";
 import logo_dark from '../../assets/logo_light2.png';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
 
             <div className="subscribe">
               <input type="email" placeholder="Your E-Mail" />
-              <Button className="subscribe-btn">Subscribe</Button>
+              <Button className="btn_primary">Subscribe</Button>
             </div>
           </div>
 
@@ -30,9 +31,9 @@ const Footer = () => {
           <div className="col-lg-2 col-md-4">
             <Typography className="footer-title">Company</Typography>
             <ul>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
+              <li><Link to="../about"> About </Link></li>
+              <li><Link to="../services"> Services </Link></li>
+              <li><Link to="../contact"> Contact </Link></li>
             </ul>
           </div>
 
@@ -52,24 +53,24 @@ const Footer = () => {
           <div className="col-lg-3 col-md-4">
             <Typography className="footer-title">Contact</Typography>
 
-            <div className="contact-item">
+            <Link className="contact-item" to='https://maps.app.goo.gl/8WxTWM2m25hWW9ZV8' target="_blank">
               <LocationOnIcon />
               <span>
                 Gurgaon, India
               </span>
-            </div>
+            </Link>
 
             <div className="divider" />
 
-            <div className="contact-item">
+            <Link className="contact-item" to='tel:+918283003828'>
               <CallIcon />
               <span>+91 82830-03828</span>
-            </div>
+            </Link>
 
-            <div className="contact-item">
+            <Link className="contact-item" to='mailto:info@striveedge.in'>
               <EmailIcon />
               <span>info@striveedge.in</span>
-            </div>
+            </Link>
           </div>
         </div>
 

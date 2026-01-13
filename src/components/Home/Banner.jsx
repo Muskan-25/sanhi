@@ -3,7 +3,9 @@ import { Button, IconButton } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import CallIcon from "@mui/icons-material/Call";
 import '../../styles/home.scss'
+import { Link, useNavigate } from "react-router-dom";
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <section className="banner container">
       <div className="container">
@@ -20,14 +22,14 @@ const Banner = () => {
             </p>
 
             <div className="banner-actions">
-              <Button className="primary-btn">
+              <Button className="btn_primary" onClick={(e)=>navigate('contact')}>
                 Get a Free Consultation
               </Button>
 
-              <div className="call-info">
+              <Link className="call-info" to='tel:+918283003828'>
                 <CallIcon />
                 <span>CALL : +91 82830-03828</span>
-              </div>
+              </Link>
             </div>
           </div>
 

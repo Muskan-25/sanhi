@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../../styles/header.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo_dark from '../../assets/logo_dark2.png';
 import logo_light from '../../assets/logo_light2.png';
 
@@ -27,6 +27,7 @@ const navItems = [
 const Header = ({home}) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -51,7 +52,7 @@ const Header = ({home}) => {
             ))}
           </Box>
 
-          <Button className="quote-btn">Get A Quote →</Button>
+          <Button className="quote-btn" onClick={(e)=>navigate('../contact')}>Get A Quote →</Button>
 
           <IconButton
             className="menu-icon"
