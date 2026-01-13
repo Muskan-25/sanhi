@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Box, Typography, Button, TextField } from "@mui/material";
+import { Box, Typography, Button, TextField, CircularProgress } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import axios from "axios";
 
 import "../../styles/contact.scss";
 import { Link } from "react-router-dom";
@@ -16,22 +17,43 @@ const ContactSection = () => {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // 🚫 stop reload
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    console.log("Form Submitted:", formData);
+  try {
+    setLoading(true);
+    const response = await axios.post(
+      "http://localhost:5000/api/contact",
+      formData
+    );
 
-    // 👉 Later connect to backend SMTP API here
-  };
+    console.log("Success:", response.data);
+
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error(error);
+  }finally{
+    setLoading(false);
+  }
+};
+
 
   return (
     <Box className="contact-section">
+      {loading && <Box className="loading"><CircularProgress/></Box> }
       <Box className="contact-wrapper container">
         {/* LEFT CONTENT */}
         <Box className="contact-info">

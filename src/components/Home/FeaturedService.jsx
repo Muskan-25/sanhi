@@ -4,6 +4,7 @@ import PublicIcon from "@mui/icons-material/Public";
 import GroupsIcon from "@mui/icons-material/Groups";
 import HubIcon from "@mui/icons-material/Hub";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
 import '../../styles/home.scss';
 
 const services = [
@@ -29,7 +30,7 @@ const services = [
     id: "04",
     title: "Taxation & Compliance Services",
     desc: "Stay compliant and stress-free with expert support for taxation, regulatory filings, and statutory compliance across industries and jurisdictions.",
-    icon: <BusinessCenterIcon />,
+    icon: <AccountBalanceOutlinedIcon />,
   },
 
   {

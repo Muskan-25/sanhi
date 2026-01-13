@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 
 * {
   font-family: $font-primary !important;
@@ -507,6 +508,26 @@ a{
 
     .title {
       font-size: 28px;
+    }
+  }
+}
+
+
+.loading {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 9999;
+  @include flex(row,0px, center,center);
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+
+  .MuiCircularProgress-root {
+    svg {
+      color: $white;
     }
   }
 }

@@ -4,6 +4,7 @@ import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import MonitorOutlinedIcon from "@mui/icons-material/MonitorOutlined";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
+import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
 import { Link } from "react-router-dom";
 const steps = [
   {
@@ -28,9 +29,9 @@ const steps = [
 
   {
     id: "04",
-    title: "Performance Monitoring &amp; Scaling",
+    title: "Performance Monitoring & Scaling",
     desc: "We continuously monitor performance, provide regular updates, and scale resources as your business evolves.",
-    icon: <CheckCircleOutlineOutlinedIcon />,
+    icon: <MonitorHeartOutlinedIcon />,
   },
 ];
 
