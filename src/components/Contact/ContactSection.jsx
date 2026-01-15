@@ -112,7 +112,7 @@ reliable and scalable outsourcing solutions.
         {/* RIGHT FORM */}
         <Box className="contact-form">
           <Typography className="small-title">CONTACT US</Typography>
-          <Typography className="title">Get In Touch with Consult</Typography>
+          <Typography className="title">Get In Touch with StriveEdge</Typography>
           <span className="underline" />
 
           {/* 🔥 FORM */}
