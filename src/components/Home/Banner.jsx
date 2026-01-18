@@ -4,6 +4,8 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import CallIcon from "@mui/icons-material/Call";
 import '../../styles/home.scss'
 import { Link, useNavigate } from "react-router-dom";
+import banner from '../../assets/banner.png';
+
 const Banner = () => {
   const navigate = useNavigate();
   return (
@@ -37,7 +39,7 @@ const Banner = () => {
           <div className="col-lg-6 col-md-12 banner-image">
             <div className="image-wrapper">
               <img
-                src="https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/hero_thumb.png"
+                src={banner}
                 alt="banner"
                 className="img-fluid"
               />

@@ -136,7 +136,32 @@ ul {
   }
 }
 
+.social_icons{
+  @include flex(row, 20px, flex-start);
 
+  a{
+    padding: 8px 8px;
+    width: 38px;
+    height: 38px;
+    @include flex(row, 0, center, center);
+    background-color: rgba($white, .85) !important;
+    border-radius: 50%;
+    i{
+      color: $color-primary !important;
+      font-size: 18px;
+      font-family: "Font Awesome 7 Brands" !important;
+    }
+
+    &:hover {
+      background: $color-secondary !important;
+      transform: translateY(-3px);
+
+      i{
+        color: $white !important;
+      }
+    }
+  }
+}
 
 @keyframes slideIn {
   from {

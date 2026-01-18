@@ -4,9 +4,11 @@
 .banner {
   background: radial-gradient(at 10% 10% , $color-primary-2, $color-primary 30%);
   margin: -80px 30px 30px;
-  padding: 80px 0;
+  padding: 80px 0 60px;
   position: relative;
   max-width: -webkit-fill-available;
+  @include flex(row, auto, space-between);
+  flex-wrap: wrap;
 
   /* 🔥 CLIP PATH SHAPE */
   clip-path: polygon(0% 0%, 34% 0%, 37% 8%, 63% 8%, 66% 0%, 100% 0%, 100% 90%, 100% 100%, 0% 100%, 0% 90%);
@@ -67,6 +69,7 @@
   }
 
   .banner-image {
+    // width: 40%;
     .image-wrapper {
       position: relative;
       border-radius: 30px;
@@ -75,13 +78,29 @@
       img {
         width: 100%;
         border-radius: 30px;
+        --r: 20px;  /* control the rounded part */
+  --s: 40px;  /* control the size of the cut */
+  --a: 20deg; /* control the depth of the curvature */
+  --p: 50%;   /* control the position */
+
+  // aspect-ratio: 2/3;
+  background: #ED303C;
+  border-radius: var(--r);
+  --_m:,#000 calc(100% - 1px),#0000;
+  --_d:(var(--s) + var(--r))*cos(var(--a));
+  mask:
+    radial-gradient(var(--r) at var(--r) calc(var(--p) + var(--_d)) var(--_m)),
+    radial-gradient(var(--r) at var(--r) calc(var(--p) - var(--_d)) var(--_m)),
+    radial-gradient(var(--s) at calc(-1*sin(var(--a))*var(--s)) var(--p),
+      #0000 100%,#000 calc(100% + 1px)) calc(var(--r)*(1 - sin(var(--a)))) 0 no-repeat,
+    linear-gradient(#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0);
       }
 
       .play-btn {
         position: absolute;
         inset: 0;
-        left: -20px;
-        top: 47%;
+        left: -30px;
+        top: 43.5%;
         // margin: auto;
         width: 60px;
         height: 60px;
@@ -115,10 +134,15 @@
 
       .banner-image{
         padding: 0 30px;
+        width: 100%;
 
         .image-wrapper{
+          img{
+            mask: none;
+          }
           .play-btn{
             top: 44%;
+            display: none;
             left: -30px;
           }
         }
@@ -306,14 +330,19 @@
 
 .close-icon {
   background: $color-secondary;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   color: #fff;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  svg{
+    fill: $white !important;
+    font-size: 30px;
+  }
 }
 
 .subtitle {
@@ -704,4 +733,3 @@
     }
   }
 }
-

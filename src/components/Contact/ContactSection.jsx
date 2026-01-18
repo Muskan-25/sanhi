@@ -5,6 +5,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import axios from "axios";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 import "../../styles/contact.scss";
 import { Link } from "react-router-dom";
@@ -18,6 +20,12 @@ const ContactSection = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [snackbar, setSnackbar] = useState({
+  open: false,
+  message: "",
+  severity: "success", // success | error | warning | info
+});
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,8 +42,11 @@ const handleSubmit = async (e) => {
       formData
     );
 
-    console.log("Success:", response.data);
-
+setSnackbar({
+      open: true,
+      message: "Your message has been sent successfully!",
+      severity: "success",
+    });
     setFormData({
       name: "",
       phone: "",
@@ -45,6 +56,12 @@ const handleSubmit = async (e) => {
     });
   } catch (error) {
     console.error(error);
+    setSnackbar({
+      open: true,
+      message: "Something went wrong. Please try again.",
+      severity: "error",
+    });
+
   }finally{
     setLoading(false);
   }
@@ -180,13 +197,25 @@ reliable and scalable outsourcing solutions.
               type="submit"
               className="btn_primary"
               startIcon={<ThumbUpIcon />}
+              disabled={loading}
             >
-              Request Call Back
+              {loading ? "Sending..." : "Request Call Back"}
             </Button>
             </Box>
           </Box>
         </Box>
       </Box>
+      
+
+<Snackbar
+        open={snackbar.open}
+        autoHideDuration={4000}
+        onClose={() => setSnackbar({ ...snackbar, open: false })}
+        message={snackbar.message}
+        // action={action}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      />
+
     </Box>
   );
 };

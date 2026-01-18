@@ -5,7 +5,10 @@ import MonitorOutlinedIcon from "@mui/icons-material/MonitorOutlined";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import TuneIcon from '@mui/icons-material/Tune';
 import { Link } from "react-router-dom";
+
 const steps = [
   {
     id: "01",
@@ -15,15 +18,21 @@ const steps = [
     dark: true,
   },
   {
-    id: "02",
-    title: "Process Mapping & Scope Definition",
-    desc: "We document workflows, define responsibilities, set service scope, and identify key deliverables to avoid ambiguity and ensure clarity from the start.",
-    icon: <MonitorOutlinedIcon />,
-  },
-  {
     id: "03",
     title: "Customized Solution Design",
     desc: "Based on the defined scope, we design an outsourcing model that includes team structure, timelines, reporting methods, and performance expectations.",
+    icon: <TuneIcon />,
+  },
+  {
+    id: "06",
+    title: "Review, Optimization & Scaling",
+    desc: "We conduct periodic reviews, improve processes where required, and scale resources based on workload and business growth.",
+    icon: <MonitorHeartOutlinedIcon />,
+  },
+  {
+    id: "02",
+    title: "Process Mapping & Scope Definition",
+    desc: "We document workflows, define responsibilities, set service scope, and identify key deliverables to avoid ambiguity and ensure clarity from the start.",
     icon: <MonitorOutlinedIcon />,
   },
   {
@@ -32,18 +41,11 @@ const steps = [
     desc: "Our team undergoes structured knowledge transfer, documentation review, and training to ensure readiness before full-scale execution.",
     icon: <CheckCircleOutlineOutlinedIcon />,
   },
-
   {
     id: "05",
     title: "Service Execution & Performance Tracking",
     desc: "We begin service delivery with continuous monitoring, regular updates, and performance tracking against agreed metrics.",
-    icon: <MonitorHeartOutlinedIcon />,
-  },
-  {
-    id: "06",
-    title: "Review, Optimization & Scaling",
-    desc: "We conduct periodic reviews, improve processes where required, and scale resources based on workload and business growth.",
-    icon: <MonitorHeartOutlinedIcon />,
+    icon: <AutoGraphIcon />,
   },
 ];
 
@@ -60,7 +62,7 @@ const WorkingSteps = () => {
         We follow a clear and well-defined process to ensure smooth collaboration, transparency, and measurable results at every stage of engagement.
       </Typography>
 
-      <Box className="cardContainer">
+      <Box className="cardContainer container">
         {steps.map((step) => (
           <Card key={step.id} className="card">
             <Typography className="stepNo">{step.id}</Typography>

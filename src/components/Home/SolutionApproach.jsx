@@ -2,6 +2,7 @@
 import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material";
 import "../../styles/home.scss";
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
 
 const cards = [
   {
@@ -32,7 +33,7 @@ const SolutionApproach = () => {
       
       {/* Top notch shape */}
       <Box className="top-notch">
-        <Box className="close-icon">✕</Box>
+        <Box className="close-icon"><AcUnitIcon/></Box>
       </Box>
 
       <Typography className="subtitle">

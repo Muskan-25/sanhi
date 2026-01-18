@@ -6,6 +6,7 @@ import HubIcon from "@mui/icons-material/Hub";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
 import '../../styles/home.scss';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 const services = [
   {
@@ -43,7 +44,7 @@ const services = [
     id: "06",
     title: "Financial Advisory Services",
     desc: "Make informed financial decisions with our advisory support, covering budgeting, financial planning, performance analysis, and strategic insights to support sustainable business growth.",
-    icon: <BusinessCenterIcon />,
+    icon: <LocalAtmIcon />,
   },
 ];
 
