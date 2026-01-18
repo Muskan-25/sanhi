@@ -23,7 +23,7 @@ export default function CtaStats() {
           <Box className="stat-item">
             <Typography className="stat-value">1500+</Typography>
             <Typography className="stat-label">
-              TOTAL PROJECTS <br /> COMPLATED
+              TOTAL PROJECTS <br /> COMPLETED
             </Typography>
           </Box>
 

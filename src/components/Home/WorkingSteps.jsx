@@ -10,27 +10,39 @@ const steps = [
   {
     id: "01",
     title: "Requirement Assessment",
-    desc: "We begin by understanding your business objectives, operational challenges, and specific outsourcing requirements to ensure complete alignment.",
+    desc: "We begin by understanding your business objectives, current processes, operational challenges, and outsourcing expectations to ensure practical alignment.",
     icon: <DescriptionOutlinedIcon />,
     dark: true,
   },
   {
     id: "02",
-    title: "Customized Solution Design",
-    desc: "Based on your needs, we develop a tailored outsourcing strategy, defining scope, resources, timelines, and performance benchmarks.",
+    title: "Process Mapping & Scope Definition",
+    desc: "We document workflows, define responsibilities, set service scope, and identify key deliverables to avoid ambiguity and ensure clarity from the start.",
     icon: <MonitorOutlinedIcon />,
   },
   {
     id: "03",
-    title: "Seamless Team Integration",
-    desc: "Our dedicated professionals are onboarded and integrated into your existing workflows, ensuring continuity, efficiency, and collaboration.",
+    title: "Customized Solution Design",
+    desc: "Based on the defined scope, we design an outsourcing model that includes team structure, timelines, reporting methods, and performance expectations.",
+    icon: <MonitorOutlinedIcon />,
+  },
+  {
+    id: "04",
+    title: "Knowledge Transfer & Team Onboarding",
+    desc: "Our team undergoes structured knowledge transfer, documentation review, and training to ensure readiness before full-scale execution.",
     icon: <CheckCircleOutlineOutlinedIcon />,
   },
 
   {
-    id: "04",
-    title: "Performance Monitoring & Scaling",
-    desc: "We continuously monitor performance, provide regular updates, and scale resources as your business evolves.",
+    id: "05",
+    title: "Service Execution & Performance Tracking",
+    desc: "We begin service delivery with continuous monitoring, regular updates, and performance tracking against agreed metrics.",
+    icon: <MonitorHeartOutlinedIcon />,
+  },
+  {
+    id: "06",
+    title: "Review, Optimization & Scaling",
+    desc: "We conduct periodic reviews, improve processes where required, and scale resources based on workload and business growth.",
     icon: <MonitorHeartOutlinedIcon />,
   },
 ];
@@ -38,7 +50,7 @@ const steps = [
 const WorkingSteps = () => {
   return (
     <Box className="working_steps_wrapper">
-      <Typography className="smallTitle">HOW IT WORKS</Typography>
+      <Typography className="smallTitle">HOW WE WORK</Typography>
 
       <Typography className="heading">
         Our Structured Approach to Delivering Reliable Outsourcing Solutions

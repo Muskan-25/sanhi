@@ -39,6 +39,12 @@ const services = [
     desc: "Ensure financial accuracy and transparency with our accounting and bookkeeping services, including daily bookkeeping, reporting, payroll support, and reconciliations.",
     icon: <BusinessCenterIcon />,
   },
+  {
+    id: "06",
+    title: "Financial Advisory Services",
+    desc: "Make informed financial decisions with our advisory support, covering budgeting, financial planning, performance analysis, and strategic insights to support sustainable business growth.",
+    icon: <BusinessCenterIcon />,
+  },
 ];
 
 const FeaturedService = () => {
