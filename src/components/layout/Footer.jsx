@@ -38,7 +38,7 @@ const Footer = () => {
   </Link>
 
   <Link
-    to="https://instagram.com"
+    to="https://www.instagram.com/striveedge.in?igsh=MXNkcmxvZm42dnZkYw%3D%3D&utm_source=qr"
     target="_blank"
     rel="noreferrer"
     className="icon"
@@ -56,7 +56,7 @@ const Footer = () => {
   </Link>
 
   <Link
-    to="https://twitter.com"
+    to="https://x.com/striveedge_in"
     target="_blank"
     rel="noreferrer"
     className="icon"
