@@ -6,6 +6,7 @@ import CtaStats from '../components/common/CTAStats'
 import Testimonials from '../components/common/Testimonials'
 import AboutSection from '../components/Home/AboutSection'
 import WhyChooseUs from '../components/About/WhyChooseUs'
+import VisionMission from '../components/About/VisionMission'
 import about_bg from '../assets/about_bg.png'
 
 function About() {
@@ -15,6 +16,7 @@ function About() {
         <PageHero title="About Us" bgImage={about_bg} />
 
         <AboutSection/>
+        <VisionMission/>
         <CtaStats/>
         <WhyChooseUs/>
         {/* <Testimonials/> */}
