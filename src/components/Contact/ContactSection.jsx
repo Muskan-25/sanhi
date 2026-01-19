@@ -156,6 +156,7 @@ reliable and scalable outsourcing solutions.
               fullWidth
               value={formData.phone}
               size="small"
+              required
               onChange={handleChange}
             />
 
