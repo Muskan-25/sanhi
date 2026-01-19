@@ -7,7 +7,7 @@ import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import TuneIcon from '@mui/icons-material/Tune';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const steps = [
   {
@@ -50,6 +50,12 @@ const steps = [
 ];
 
 const WorkingSteps = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (stepId) => {
+    navigate(`/how-we-work#step-${stepId}`);
+  };
+
   return (
     <Box className="working_steps_wrapper">
       <Typography className="smallTitle">HOW WE WORK</Typography>
@@ -64,7 +70,12 @@ const WorkingSteps = () => {
 
       <Box className="cardContainer container">
         {steps.map((step) => (
-          <Card key={step.id} className="card">
+          <Card 
+            key={step.id} 
+            className="card"
+            onClick={() => handleCardClick(step.id)}
+            sx={{ cursor: 'pointer' }}
+          >
             <Typography className="stepNo">{step.id}</Typography>
 
             <Box className="iconBox">{step.icon}</Box>
