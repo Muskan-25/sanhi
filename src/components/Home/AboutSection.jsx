@@ -4,6 +4,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import "../../styles/home.scss";
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import aboutImage from "../../assets/about.png";
 
 export default function AboutSection() {
 
@@ -27,7 +28,7 @@ export default function AboutSection() {
         {/* LEFT IMAGE */}
         <Box className="image-wrapper">
           <img
-            src="https://html.tf.dreamitsolution.net/consalt/assets/images/home_one/about_thumb.png"
+            src={aboutImage}
             alt="About"
             className="main-image"
           />
@@ -46,6 +47,9 @@ export default function AboutSection() {
                   BUSINESS • CONSULTING • MARKETING •
                 </textPath>
               </text>
+              
+              {/* Center dot */}
+              <circle cx="60" cy="60" r="2" fill="#fff" />
             </svg>
           </Box>
 
