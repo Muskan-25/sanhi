@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, IconButton } from "@mui/material";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import CallIcon from "@mui/icons-material/Call";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import '../../styles/home.scss'
 import { Link, useNavigate } from "react-router-dom";
 import banner from '../../assets/banner.png';
@@ -10,6 +10,17 @@ const Banner = () => {
   const navigate = useNavigate();
   return (
     <section className="banner container">
+      {/* SVG Gradient Definition */}
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <linearGradient id="logo-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#e0f7fa" />
+            <stop offset="100%" stopColor="#b2ebf2" />
+          </linearGradient>
+        </defs>
+      </svg>
+      
       <div className="container">
         <div className="row align-items-center">
 
@@ -45,7 +56,7 @@ const Banner = () => {
               />
 
               <IconButton className="play-btn">
-                <PlayArrowIcon />
+                <AutoAwesomeIcon className="logo-icon" />
               </IconButton>
             </div>
           </div>

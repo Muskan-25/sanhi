@@ -41,6 +41,7 @@ const handleSubmit = async (e) => {
       "https://sanhi-backend.onrender.com/api/contact",
       formData
     );
+console.log(response);
 
 setSnackbar({
       open: true,
@@ -55,10 +56,19 @@ setSnackbar({
       message: "",
     });
   } catch (error) {
-    console.error(error);
+    console.error('Contact form error:', error);
+    
+    // Extract error message from response if available
+    let errorMessage = "Something went wrong. Please try again.";
+    if (error.response?.data?.message) {
+      errorMessage = error.response.data.message;
+    } else if (error.message) {
+      errorMessage = error.message;
+    }
+    
     setSnackbar({
       open: true,
-      message: "Something went wrong. Please try again.",
+      message: errorMessage,
       severity: "error",
     });
 
@@ -210,12 +220,18 @@ reliable and scalable outsourcing solutions.
 
 <Snackbar
         open={snackbar.open}
-        autoHideDuration={4000}
+        autoHideDuration={6000}
         onClose={() => setSnackbar({ ...snackbar, open: false })}
-        message={snackbar.message}
-        // action={action}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-      />
+      >
+        <Alert 
+          onClose={() => setSnackbar({ ...snackbar, open: false })} 
+          severity={snackbar.severity}
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
 
     </Box>
   );

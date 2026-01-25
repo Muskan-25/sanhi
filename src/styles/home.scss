@@ -84,7 +84,7 @@
   --p: 50%;   /* control the position */
 
   // aspect-ratio: 2/3;
-  background: #ED303C;
+  background: transparent;
   border-radius: var(--r);
   --_m:,#000 calc(100% - 1px),#0000;
   --_d:(var(--s) + var(--r))*cos(var(--a));
@@ -106,9 +106,22 @@
         height: 60px;
         background: #0aa6a6;
         color: #fff;
+        transition: all 0.3s ease;
 
         &:hover {
           background: #089191;
+          transform: scale(1.1);
+        }
+
+        .logo-icon {
+          font-size: 36px !important;
+          color: #fff !important;
+          animation: logo-icon-animate 2s ease-in-out infinite;
+          fill: url(#logo-icon-gradient) !important;
+          
+          path {
+            fill: url(#logo-icon-gradient) !important;
+          }
         }
       }
     }
@@ -151,10 +164,32 @@
   
 }
 
-@media (max-width: 560px){
-  margin: -80px 15px 0px !important;
-
+  @media (max-width: 560px){
+    margin: -80px 15px 0px !important;
+  }
 }
+
+@keyframes logo-icon-animate {
+  0%, 100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  }
+  25% {
+    transform: scale(1.1) translateY(-2px) rotate(-5deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    transform: scale(1.15) translateY(-3px) rotate(0deg);
+    opacity: 1;
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.4));
+  }
+  75% {
+    transform: scale(1.1) translateY(-2px) rotate(5deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+  }
 }
 
 
@@ -339,9 +374,32 @@
   justify-content: center;
   align-items: center;
 
-  svg{
+  svg {
     fill: $white !important;
     font-size: 30px;
+  }
+
+  .ac-unit-icon {
+    font-size: 42px !important;
+    animation: ac-unit-spin 4s ease-in-out infinite;
+    fill: url(#ac-unit-gradient) !important;
+    
+    path {
+      fill: url(#ac-unit-gradient) !important;
+    }
+  }
+}
+
+@keyframes ac-unit-spin {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
   }
 }
 
@@ -421,21 +479,6 @@
     transition: transform 0.4s ease;
     z-index: -1;
   }
-
-  &:hover::before {
-    transform: scaleX(1);
-  }
-
-  &:hover {
-    .card-title,
-    .arrow {
-      color: $color-primary !important;
-    }
-  }
-
-  .MuiCardContent-root {
-    
-  }
 }
 
 /* TEXT STYLES */
@@ -458,12 +501,27 @@
 }
 
 /* Optional arrow micro animation */
-.solution-card:hover .arrow {
+.solution-card:hover {
+.arrow {
   color: $color-primary;
   
   svg{
     transform: scaleX(2);
   }
+}
+.MuiCardContent-root{
+  &::before {
+    transform: scaleX(1);
+  }
+  
+  
+    .card-title,
+    .arrow {
+      color: $color-primary !important;
+    }
+  
+
+}
 }
 
 
