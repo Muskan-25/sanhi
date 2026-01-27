@@ -146,7 +146,7 @@ function HowWeWork() {
         </Box>
 
         {/* Partnership Section */}
-        <Box className="partnership-section">
+        {/* <Box className="partnership-section">
           <Box className="container">
             <Typography className="section-title">A Partnership Built for Long-Term Success</Typography>
             <Typography className="section-description">
@@ -155,7 +155,7 @@ function HowWeWork() {
               team—focused on delivering value, reliability, and sustainable growth.
             </Typography>
           </Box>
-        </Box>
+        </Box> */}
 
         {/* KPIs Section */}
         <Box className="kpis-section">
